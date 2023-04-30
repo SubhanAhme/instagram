@@ -1,5 +1,12 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:insta/views/midview.dart';
+import 'package:insta/views/postview.dart';
+import 'package:insta/views/stories.dart';
+
+import 'customwidget/customwidget.dart';
 
 void main() {
   runApp(InstagramProfile());
@@ -13,7 +20,7 @@ class InstagramProfile extends StatelessWidget {
           
       appBar: AppBar(
           title: Text('Subhan4416',),
-          backgroundColor: Colors.deepPurpleAccent,
+          backgroundColor: Colors.pinkAccent,
           
           actions: [
             IconButton(
@@ -25,79 +32,48 @@ class InstagramProfile extends StatelessWidget {
               onPressed: () {},
             ),
           ]),
+          
           body: Container(
-            child: Container(
-                 
-              margin: EdgeInsets.all(16.0),
-           
-            child: Row(
-              
+            
+            child: Column(
               children: [
-                
-                
-                Column(
+                HeadView(),
+                MidView(),
+                StoryView(),
+                Container(
+                 child: const DefaultTabController(
+              length: 3,
+              child: TabBar(
+                labelColor: Colors.black87,
+                unselectedLabelColor: Colors.pinkAccent,
+                tabs: [
+                  Tab(icon: Icon(Icons.grid_on_sharp)),
+                  Tab(icon: Icon(Icons.browse_gallery_outlined)),
+                  Tab(icon: Icon(Icons.person_2_outlined)),
                   
-                  children: [
-                       CircleAvatar(
-                  
-                  radius: 40,
-                  backgroundImage: AssetImage('assets/profile.jpg'),
-                
-                ),
-                Text("Subhan Ahmed" ,
-                style: TextStyle(fontSize: 17),
-                ),
-                  ],
+                ],
+              ),
+            ),
+            
                 ),
                 Container(
-                  padding: const EdgeInsets.fromLTRB(10,10,10,10),
-                  child: Row(
-                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                       Column(
-                      
-                    children: [
-                      SizedBox(width: 20,),
-                      Text("40" ,style: TextStyle(fontSize: 40),),
-                      Text("post",style: TextStyle(fontSize: 15),)
-                    ],
-                    
-                  ),
-                   Column(
-                    children: [
-                       SizedBox(width: 20,),
-                      
-                      Text("40" ,style: TextStyle(fontSize: 40),),
-                      Text("followers",style: TextStyle(fontSize: 15),)
-                    ],
-                    
-                  ),
-                   Column(
-                    children: [
-                       SizedBox(width: 20,),
-                      
-                      Text("40" ,style: TextStyle(fontSize: 40),),
-                      Text("following",style: TextStyle(fontSize: 15),)
-                    ],
-                    
-                  ),
-                    ],
-                  ),
-
+                  child: PostView(),
                 )
               ],
-             
-              
-            ),
-            
-            ),
-            
-       
+            )
+
           ),
+         
+
           
           
           
-      // body: Row(
+    ));
+  }
+}
+
+
+ // body: Row(
       
       //   children: [
       //     Container(
@@ -155,8 +131,3 @@ class InstagramProfile extends StatelessWidget {
           
       //   ],
       // ),
-    ));
-  }
-}
-
-
