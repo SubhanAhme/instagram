@@ -4,58 +4,39 @@ import 'package:flutter/material.dart';
 MidView() {
   return Container( 
     
-    margin: EdgeInsets.only(left: 30,
+    margin: EdgeInsets.only(left: 60,
     top: 15,),
     child: Row(
-                  children: [ const SizedBox(
-            width: 20,
+                  children: [
+                    ElevatedButton(
+          child: Text('   follow   ',style: TextStyle(
+                     fontSize: 20,
+                      fontWeight: FontWeight.bold,color: Colors.black87)),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.pinkAccent,
+            
           ),
-                    
-                    Container(
-                height: 25,
-                width: 125,
-                decoration: const BoxDecoration(
-                    color: Colors.pinkAccent,
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
-                child: 
-                const Text(
-                  "             Follow",style: TextStyle(
-                      fontWeight: FontWeight.bold,color: Colors.black54),
-                  
-                ),
-                
-              ),
-             const Text("  "),
-               Container(
-                
-                height: 25,
-                width: 125,
-                decoration: const BoxDecoration(
-                  color:  Colors.pinkAccent,
-                    
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
-                child: const Text(
-                  "          Message",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,color: Colors.black54)
-                ),
-              ),
-              const Text('  '),
-              Container(
-                  height: 25,
-                  width: 35,
-                  decoration: const BoxDecoration(
-                      color: Colors.pinkAccent ,
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                  child: const Icon(
+          onPressed: () {},
+        ),Text("   "),
+        ElevatedButton(
+          child: Text('  message  ',style: TextStyle(
+                     fontSize: 20,
+                      fontWeight: FontWeight.bold,color: Colors.black87)),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.pinkAccent,
+            
+          ),
+          
+          onPressed: () {},
+        ),Text("   "),
+         CircleAvatar(
+          backgroundColor: Colors.pinkAccent,
+          child:  const Icon(
                     Icons.person_add_alt,
                     color: Colors.black87,
-                  )),
-                  Row(
-
-                  )
+                  ),
+         )
                   ],
-                  
                 ),
                 
   );

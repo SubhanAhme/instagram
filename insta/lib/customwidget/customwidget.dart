@@ -5,20 +5,17 @@ import 'package:flutter/material.dart';
 
 HeadView() {
   return Container(
+    padding: EdgeInsets.only(left: 10,top:20,),
+
     width: 500,
     child: Column(
       children: [
-        const SizedBox(
-            height: 10,
-          ),
         Row(children: [
-          Row(
+          Container(
+            child: Row(
             
             children: [
-              const SizedBox(
-            height: 10,
-            width: 20,
-          ),
+          
               Column(
                 children: [
                   
@@ -27,7 +24,7 @@ HeadView() {
               backgroundImage: AssetImage(
                   "assets/profile.jpg"),),
                   Text("Subhan Ahmed", style: TextStyle(
-                      fontWeight: FontWeight.bold,),),
+                     fontWeight: FontWeight.bold,),),
                   Text("UBIT Student"),
                   Text("Mid Bleak Winter"),
                   
@@ -36,14 +33,18 @@ HeadView() {
               
             ],
           ),
-          
-                  Column(
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 20,bottom: 20,),
+            child: Row(
+              children: [
+                 Column(
               children: const [
             
                 Text(
                   '90',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,),
+                       fontSize: 30,fontWeight: FontWeight.bold,),
                 ),
                 Text(
                   'Posts',
@@ -59,6 +60,7 @@ HeadView() {
                 Text(
                   '2M',
                   style: TextStyle(
+                     fontSize: 30,
                       fontWeight: FontWeight.bold,),
                 ),
                 Text(
@@ -75,6 +77,7 @@ HeadView() {
                 Text(
                   '234',
                   style: TextStyle(
+                     fontSize: 30,
                       fontWeight: FontWeight.bold,),
                 ),
                 Text(
@@ -87,6 +90,10 @@ HeadView() {
             const SizedBox(
             width: 20,
           ),
+              ],
+            ),
+          )
+                 
         ],
         
 
