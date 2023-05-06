@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 HeadView() {
   return Container(
-    padding: EdgeInsets.only(left: 10,top:20,),
+    padding: EdgeInsets.only(top:20,),
 
     width: 500,
     child: Column(

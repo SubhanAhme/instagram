@@ -19,16 +19,18 @@ class InstagramProfile extends StatelessWidget {
         home: Scaffold(
           
       appBar: AppBar(
-          title: Text('Subhan4416',),
+          title: Text('Subhan4416',style:TextStyle(fontWeight: FontWeight.bold,color: Colors.black87) ),
           backgroundColor: Colors.pinkAccent,
-          
+         
           actions: [
             IconButton(
               icon: Icon(Icons.add_box),
+              color: Colors.black87,
               onPressed: () {},
             ),
             IconButton(
               icon: Icon(Icons.menu),
+              color: Colors.black87,
               onPressed: () {},
             ),
           ]),
